@@ -1,0 +1,31 @@
+img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.prod {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.quant {
+  color: #00acd2;
+  font-size: 20pt;
+}
+
+button {
+  height: 30px;
+  width: 100px;
+  background-color: blue;
+  text-align: aqua;
+  font-size: 10pt;
+  border-radius: 15px;
+  color: white;
+}
+
+span {
+  cursor: pointer;
+}

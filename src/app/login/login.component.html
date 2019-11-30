@@ -1,0 +1,32 @@
+<div style="width: 600px; margin: 0 auto; padding: 15px;">
+  <div class="heading">
+    User Login
+  </div>
+  <form [formGroup]="loginForm">
+    <div>
+      <input type="email" formControlName="email" placeholder="Email" required>
+      <div *ngIf="loginForm.controls['email'].errors && !loginForm.controls['email'].pristine" class="error-msg">
+        <div [hidden]="!loginForm.controls['email'].errors.required">Email is required.</div>
+        <div [hidden]="!loginForm.controls['email'].errors.pattern">Email is invalid.</div>
+      </div>
+    </div>
+    <div>
+      <input type="password" formControlName="password" placeholder="Password" required>
+      <div *ngIf="loginForm.controls['password'].errors && !loginForm.controls['password'].pristine" class="error-msg">
+        <div [hidden]="!loginForm.controls['password'].errors.required">Password is required.</div>
+      </div>
+    </div>
+    <div>
+      <select (change)="location($event)">
+        <option value="Mumbai">Mumbai</option>
+        <option value="Bengaluru">Bengaluru</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Chennai">Chennai</option>
+      </select>
+    </div>
+  </form>
+  <div *ngIf="incorrectCredentials" style="color: red; font-size: 15pt">
+    UserName or password is incorrect
+  </div>
+  <button [disabled]="loginForm.invalid" (click)="login()">Login</button>
+</div>

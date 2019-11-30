@@ -1,0 +1,47 @@
+<div style="width: 600px; margin:0 auto; padding: 15px;">
+  <div class="prod" *ngIf="!prod1Del && prods && prods.product1 !== 0">
+    <div class="">
+      <div style="margin-bottom: 10px;">Product 1</div>
+      <img src="../../assets/images/sam1.jpg" alt="">
+    </div>
+    <div class="quant">
+      <span style="margin-right: 10px;" (click)="deleteProd('1')">Delete</span>
+    </div>
+  </div>
+  <div class="prod" *ngIf="!prod2Del && prods && prods.product2 !== 0">
+    <div class="">
+      <div style="margin-bottom: 10px;">Product 2</div>
+      <img src="../../assets/images/sam2.jpg" alt="">
+    </div>
+    <div class="quant">
+      <span style="margin-right: 10px;" (click)="deleteProd('2')">Delete</span>
+    </div>
+  </div>
+  <div class="prod" *ngIf="!prod3Del && prods && prods.product3 !== 0">
+    <div class="">
+      <div style="margin-bottom: 10px;">Product 3</div>
+      <img src="../../assets/images/sam3.jpg" alt="">
+    </div>
+    <div class="quant">
+      <span style="margin-right: 10px;" (click)="deleteProd('3')">Delete</span>
+    </div>
+  </div>
+  <div class="infoDiv" *ngIf="displayInfo">
+    <div class="info">
+      UserName: {{this.user}}
+    </div>
+    <div class="info">
+      Password: {{this.pass}}
+    </div>
+    <div class="info">
+      Location: {{this.loc}}
+    </div>
+    <div class="info">
+      Products:<br>
+      Product 1: {{this.prods && this.prods.product1}} <br>
+      Product 2: {{this.prods && this.prods.product2}}<br>
+      Product 3: {{this.prods && this.prods.product3}}
+    </div>
+  </div>
+  <button (click)="showInfo()">Display Info</button>
+</div>

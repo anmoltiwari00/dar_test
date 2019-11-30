@@ -1,0 +1,42 @@
+<div style="width: 600px; margin:0 auto; padding: 15px;">
+  <div class="prod">
+    <div class="">
+      <img src="../../assets/images/sam1.jpg" alt="">
+      <div class="">
+        Quantity: {{prod1}}
+      </div>
+    </div>
+    <div class="quant">
+      <span style="margin-right: 10px;" (click)="changeProd('1', 'sub')">-</span>
+      <span style="margin-right: 10px;">{{prod1}}</span>
+      <span (click)="changeProd('1', 'add')">+</span>
+    </div>
+  </div>
+  <div class="prod">
+    <div class="">
+      <img src="../../assets/images/sam2.jpg" alt="">
+      <div class="">
+        Quantity: {{prod2}}
+      </div>
+    </div>
+    <div class="quant">
+      <span style="margin-right: 10px;" (click)="changeProd('2', 'sub')">-</span>
+      <span style="margin-right: 10px;">{{prod2}}</span>
+      <span (click)="changeProd('2', 'add')">+</span>
+    </div>
+  </div>
+  <div class="prod">
+    <div class="">
+      <img src="../../assets/images/sam3.jpg" alt="">
+      <div class="">
+        Quantity: {{prod3}}
+      </div>
+    </div>
+    <div class="quant">
+      <span style="margin-right: 10px;" (click)="changeProd('3', 'sub')">-</span>
+      <span style="margin-right: 10px;">{{prod3}}</span>
+      <span (click)="changeProd('3', 'add')">+</span>
+    </div>
+  </div>
+  <button (click)="addToCart()">Cart</button>
+</div>
